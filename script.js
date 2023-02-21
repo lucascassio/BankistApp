@@ -52,7 +52,7 @@ document.querySelector('.nav__links').addEventListener('click', function(e) {
   }
 });
 
-// btn content
+// Btn content
 tabsContainer.addEventListener('click', function (e)  {
   // selecting clicked btn
   const clicked = e.target.closest('.operations__tab');
@@ -66,7 +66,7 @@ tabsContainer.addEventListener('click', function (e)  {
   document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active');  
 });
 
-//nav fade animation
+//Nav Fade animation
 const mouseOver = function (e) {
   if(e.target.classList.contains('nav__link')) {
     const link = e.target;
@@ -83,7 +83,7 @@ const mouseOver = function (e) {
 nav.addEventListener('mouseover', mouseOver.bind(0.5)); 
 nav.addEventListener('mouseout', mouseOver.bind(1.0));  
 
-//setting sticky navigation
+//Setting sticky navigation
 
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
@@ -123,7 +123,7 @@ allSections.forEach(function(section) {
   section.classList.add('section--hidden');
 })
 
-//loading images
+//Loading images
 
 const imgTargets = document.querySelectorAll('img[data-src]');
 
@@ -148,7 +148,7 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach(img=> imgObserver.observe(img));
 
-//slider 
+//Slider Component
 
 const slider = function () {
 
